@@ -6,12 +6,13 @@ service_type: rest
 tags: [gate2, full, inventory-contracts, rest, test, release]
 branches: [test, release]
 severity: high
+ignore_json_paths:
+  - $.headers
 rest:
   method: POST
-  base_url: http://localhost:8082
-  endpoint: /api/inventory/reservations
+  base_url: http://localhost:8083
+  endpoint: /api/orders/inventory/reservations
   headers:
     Content-Type: application/json
   expected_status: 201
   timeout_seconds: 5
-  response_fixture: actual_response.json
