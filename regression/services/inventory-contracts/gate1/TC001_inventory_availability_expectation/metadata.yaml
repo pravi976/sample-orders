@@ -3,8 +3,8 @@ name: Orders inventory availability expectation smoke
 team: orders-team
 microservice: inventory-contracts
 service_type: rest
-tags: [gate1, smoke, critical, inventory-contracts, rest, develop, test, release]
-branches: [develop, test, release]
+tags: [gate1, smoke, critical, inventory-contracts, rest, main, develop, test, release]
+branches: [main, develop, test, release]
 severity: critical
 rest:
   method: GET

@@ -3,8 +3,8 @@ name: Orders inventory JMS smoke
 team: orders-team
 microservice: orders-service
 service_type: jms
-tags: [gate1, smoke, critical, orders-service, jms, develop, test, release]
-branches: [develop, test, release]
+tags: [gate1, smoke, critical, orders-service, jms, main, develop, test, release]
+branches: [main, develop, test, release]
 severity: critical
 jms:
   provider: file
