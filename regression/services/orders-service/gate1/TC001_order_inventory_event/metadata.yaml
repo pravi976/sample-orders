@@ -1,0 +1,15 @@
+id: ORDERS_JMS_TC001_INVENTORY_EVENT
+name: Orders inventory JMS smoke
+team: orders-team
+microservice: orders-service
+service_type: jms
+tags: [gate1, smoke, critical, orders-service, jms, develop, test, release]
+branches: [develop, test, release]
+severity: critical
+jms:
+  provider: file
+  request_queue: ORDERS.INVENTORY.REQUEST
+  response_queue: ORDERS.INVENTORY.RESPONSE
+  correlation_id_strategy: uuid
+  timeout_seconds: 5
+  retry_count: 1

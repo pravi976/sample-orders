@@ -1,0 +1,6 @@
+{
+  "eventId": "ORD-EVT-001",
+  "eventType": "ORDER_INVENTORY_CHECK_REQUESTED",
+  "orderNumber": "ORD-2026-00042",
+  "sku": "SKU-LAPTOP-999"
+}

@@ -1,0 +1,29 @@
+repository: sample-orders
+owner: platform-samples
+default_branch: develop
+services_root: regression/services
+build_tool: gradle
+commands:
+  build:
+    - '.\gradlew.bat test'
+gates:
+  gate1: [gate1, critical]
+  gate2: [gate2, full]
+gate_policies:
+  gate1:
+    enabled: true
+    reason: Orders fast regression gate is active
+  gate2:
+    enabled: true
+    reason: Orders full regression gate is active
+service_owners:
+  orders-service: orders-team
+  inventory-contracts: orders-team
+impact_map:
+  src/main/java/com/fedex/sample/orders/domain/**:
+    - orders-service
+  src/main/java/com/fedex/sample/orders/contracts/**:
+    - inventory-contracts
+  src/main/resources/**:
+    - orders-service
+    - inventory-contracts
